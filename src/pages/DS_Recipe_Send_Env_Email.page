@@ -1,0 +1,33 @@
+<!-- page DS_Recipe_Send_Env_Email -->
+<apex:page controller="DS_Recipe_Send_Env_Email_Controller">
+  <apex:form >
+      <apex:pageBlock >
+         <h1>Send a Signing Request via Email v2</h1>
+         <p>This form will send a DocuSign signing request. 
+         The signer will receive an email from DocuSign to start the process.</p> 
+         <p>Signer's Name: &nbsp;&nbsp;<apex:inputText value="{!signer_name}" /></p>
+         <p>Signer's Email: &nbsp;&nbsp;<apex:inputText value="{!signer_email}" /></p>
+         <p>Optional customized email message for the signer. Example: "As we discussed, please sign the attached agreement."<br />
+         You can use the "return" key for new lines within the message.</p>
+         <p><apex:inputTextarea value="{!email_message}" /></p>
+         <p><apex:commandButton action="{!send}" onclick="clicked();" rerender="dssdk_output" value="Send!" /></p>
+         <!-- Since we need will later need to search for the id, make it unique. Eg, not something simple like "output" --> 
+      </apex:pageBlock>  
+  </apex:form>
+
+  <apex:pageblock >
+    <apex:outputPanel id="dssdk_output" layout="block">
+        <apex:outputText value="{!output}" escape="false" />
+    </apex:outputPanel>
+  </apex:pageblock>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    // Calling SFDC Ajax from a script: https://developer.salesforce.com/docs/atlas.en-us.pages.meta/pages/pages_compref_actionFunction.htm
+    // SFDC and JQuery: https://developer.salesforce.com/page/Developing_Apps_with_jQuery
+    j$ = jQuery.noConflict();
+
+    function clicked() {
+      j$('[id*=dssdk_output]').html("Working..."); // Search for an id which includes dssdk_output
+    }
+  </script>
+</apex:page>

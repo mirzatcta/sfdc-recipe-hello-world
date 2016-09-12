@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>DS_Recipe_Send_Env_Email2_Controller</members>
+		<members>DS_Recipe_Send_Env_Email_Controller</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>DS_Recipe_Send_Env_Email2</members>
+		<members>DS_Recipe_Send_Env_Email</members>
+		<name>ApexPage</name>
+	</types>
+	<version>37.0</version>
+</Package>
