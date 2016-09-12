@@ -98,3 +98,7 @@ The following posts also discuss tests for a WSDL-generated Apex class:
 ## 7. Try it out
 Navigate to \[your SFDC org\]/apex/DS_Recipe_Send_Env_Email and try sending a signing request.
 
+## Questions, Problems, Issues
+* If you have a question about a DocuSign API, please use the "docusignapi" tag on [StackOverflow](http://www.stackoverflow.com)
+* Pull requests and other issues for this repository can be filed with the [repo's Issues list](https://github.com/docusign/sfdc-recipe-hello-world/issues).
+
