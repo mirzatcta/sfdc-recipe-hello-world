@@ -2,7 +2,7 @@
 <apex:page controller="DS_Recipe_Send_Env_Email_Controller">
   <apex:form >
       <apex:pageBlock >
-         <h1>Send a Signing Request via Email v2</h1>
+         <h1>Send a Signing Request via Email</h1>
          <p>This form will send a DocuSign signing request. 
          The signer will receive an email from DocuSign to start the process.</p> 
          <p>Signer's Name: &nbsp;&nbsp;<apex:inputText value="{!signer_name}" /></p>
